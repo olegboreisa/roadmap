@@ -38,7 +38,7 @@ class MoviesControllerTest {
     public void shouldReturnSizeAndListOfMovies() throws Exception {
         when(moviesService.getAll())
                 .thenReturn(List.of(new MovieDTO(1, "Titanic", 1.32, 9.6),
-                        new MovieDTO(2, "Home Alone", 2.01, 8.1)));
+                                    new MovieDTO(2, "Home Alone", 2.01, 8.1)));
 
         mockMvc.perform(MockMvcRequestBuilders
                         .get("/api/movies"))
