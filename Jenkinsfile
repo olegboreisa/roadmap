@@ -2,14 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Compile') {
+        stage('Gradle Build') {
             steps {
-                gradlew('clean', 'classes')
-            }
-        }
-        stage('Unit Tests') {
-            steps {
-                gradlew('test')
+                gradlew('build')
             }
         }
     }
