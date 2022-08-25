@@ -44,7 +44,7 @@ class MoviesControllerTest {
                         .get("/api/movies"))
                 .andDo(print())
                 .andExpect(MockMvcResultMatchers.status().isOk())
-                .andExpect(MockMvcResultMatchers.jsonPath("$.size()", Matchers.is("test")))
+                .andExpect(MockMvcResultMatchers.jsonPath("$.size()", Matchers.is("aaaaa")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].id", Matchers.is(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].name", Matchers.is("Titanic")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].length", Matchers.is(1.32)))
