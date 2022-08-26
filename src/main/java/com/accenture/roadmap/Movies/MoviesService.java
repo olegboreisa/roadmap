@@ -28,10 +28,10 @@ public class MoviesService {
         return toDTO(entity);
     }
 
-    public void save(MovieForm form) {
+    public long save(MovieForm form) {
         MovieEntity entity = new MovieEntity();
         merge(form, entity);
-        moviesRepository.save(entity);
+        return moviesRepository.save(entity).getId();
     }
 
     public void update(MovieForm form) {

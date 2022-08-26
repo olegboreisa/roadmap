@@ -1,7 +1,5 @@
 package com.accenture.roadmap.Movies;
 
-import com.accenture.roadmap.Movies.MoviesController;
-import com.accenture.roadmap.Movies.MoviesService;
 import com.accenture.roadmap.Movies.model.MovieDTO;
 import com.accenture.roadmap.Movies.model.MovieForm;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,7 +21,7 @@ import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 
 @WebMvcTest(MoviesController.class)
-class MoviesControllerTest {
+class MoviesControllerTests {
 
     @Autowired
     private MockMvc mockMvc;
@@ -35,7 +33,7 @@ class MoviesControllerTest {
     private MoviesService moviesService;
 
     @Test
-    public void shouldReturnSizeAndListOfMovies() throws Exception {
+    public void shouldReturnSizeAndFirstMovieData() throws Exception {
         when(moviesService.getAll())
                 .thenReturn(List.of(new MovieDTO(1, "Titanic", 1.32, 9.6),
                                     new MovieDTO(2, "Home Alone", 2.01, 8.1)));
@@ -48,11 +46,12 @@ class MoviesControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].id", Matchers.is(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].name", Matchers.is("Titanic")))
                 .andExpect(MockMvcResultMatchers.jsonPath("$[0].length", Matchers.is(1.32)))
-                .andExpect(MockMvcResultMatchers.jsonPath("$[0].average", Matchers.is(9.6)));
+                .andExpect(MockMvcResultMatchers.jsonPath("$[0].average", Matchers.is(9.6)))
+                .andReturn();
     }
 
     @Test
-    public void shouldReturnOneMovie() throws Exception {
+    public void shouldReturnMovieDataById() throws Exception {
         when(moviesService.getOne(anyLong()))
                 .thenReturn(new MovieDTO(1, "Titanic", 1.32, 9.6));
 
@@ -64,7 +63,8 @@ class MoviesControllerTest {
                 .andExpect(MockMvcResultMatchers.jsonPath("id", Matchers.is(1)))
                 .andExpect(MockMvcResultMatchers.jsonPath("name", Matchers.is("Titanic")))
                 .andExpect(MockMvcResultMatchers.jsonPath("length", Matchers.is(1.32)))
-                .andExpect(MockMvcResultMatchers.jsonPath("average", Matchers.is(9.6)));
+                .andExpect(MockMvcResultMatchers.jsonPath("average", Matchers.is(9.6)))
+                .andReturn();
     }
 
     @Test
@@ -77,7 +77,8 @@ class MoviesControllerTest {
                         .characterEncoding(StandardCharsets.UTF_8)
                         .content(jsonForm))
                 .andDo(print())
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
     }
 
     @Test
@@ -89,7 +90,8 @@ class MoviesControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(form))
                 .andDo(print())
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
     }
 
     @Test
@@ -97,7 +99,8 @@ class MoviesControllerTest {
         mockMvc.perform(MockMvcRequestBuilders
                         .delete("/api/movies/1"))
                 .andDo(print())
-                .andExpect(MockMvcResultMatchers.status().isOk());
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andReturn();
     }
 
 }

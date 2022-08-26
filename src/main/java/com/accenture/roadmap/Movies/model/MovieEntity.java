@@ -18,6 +18,21 @@ public class MovieEntity {
     public MovieEntity() {
     }
 
+    public MovieEntity(Long id, String name, double length) {
+        this.id = id;
+        this.name = name;
+        this.length = length;
+    }
+
+    public MovieEntity(Long id, String name, double length, int totalRate, int totalVotes, double averageRate) {
+        this.id = id;
+        this.name = name;
+        this.length = length;
+        this.totalRate = totalRate;
+        this.totalVotes = totalVotes;
+        this.averageRate = averageRate;
+    }
+
     public Long getId() {
         return id;
     }

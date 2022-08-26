@@ -27,8 +27,8 @@ public class MoviesController {
     }
 
     @PostMapping
-    public void save(@RequestBody MovieForm form) {
-        moviesService.save(form);
+    public long save(@RequestBody MovieForm form) {
+        return moviesService.save(form);
     }
 
     @PutMapping
