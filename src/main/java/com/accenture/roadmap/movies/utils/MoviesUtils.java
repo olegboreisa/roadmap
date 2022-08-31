@@ -1,8 +1,8 @@
-package com.accenture.roadmap.Movies.utils;
+package com.accenture.roadmap.movies.utils;
 
-import com.accenture.roadmap.Movies.model.MovieDTO;
-import com.accenture.roadmap.Movies.model.MovieEntity;
-import com.accenture.roadmap.Movies.model.MovieForm;
+import com.accenture.roadmap.movies.model.MovieDTO;
+import com.accenture.roadmap.movies.model.MovieEntity;
+import com.accenture.roadmap.movies.model.MovieForm;
 
 import java.util.List;
 

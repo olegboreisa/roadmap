@@ -1,4 +1,4 @@
-package com.accenture.roadmap.Rating.model;
+package com.accenture.roadmap.rating.model;
 
 public class RateDTO {
 

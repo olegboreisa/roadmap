@@ -1,8 +1,8 @@
-package com.accenture.roadmap.Movies;
+package com.accenture.roadmap.movies;
 
-import com.accenture.roadmap.Movies.model.MovieDTO;
-import com.accenture.roadmap.Movies.model.MovieEntity;
-import com.accenture.roadmap.Movies.model.MovieForm;
+import com.accenture.roadmap.movies.model.MovieDTO;
+import com.accenture.roadmap.movies.model.MovieEntity;
+import com.accenture.roadmap.movies.model.MovieForm;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

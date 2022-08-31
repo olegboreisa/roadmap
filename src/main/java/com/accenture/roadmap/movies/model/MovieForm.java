@@ -1,23 +1,22 @@
-package com.accenture.roadmap.Movies.model;
+package com.accenture.roadmap.movies.model;
 
-public class MovieDTO {
+public class MovieForm {
 
-    private long id;
+    private Long id;
     private String name;
     private double length;
-    private double average;
-    public MovieDTO(long id, String name, double length, double average) {
+
+    public MovieForm(Long id, String name, double length) {
         this.id = id;
         this.name = name;
         this.length = length;
-        this.average = average;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -36,13 +35,4 @@ public class MovieDTO {
     public void setLength(double length) {
         this.length = length;
     }
-
-    public double getAverage() {
-        return average;
-    }
-
-    public void setAverage(double average) {
-        this.average = average;
-    }
-
 }

@@ -1,13 +1,13 @@
-package com.accenture.roadmap.Movies;
+package com.accenture.roadmap.movies;
 
-import com.accenture.roadmap.Movies.model.MovieDTO;
-import com.accenture.roadmap.Movies.model.MovieEntity;
-import com.accenture.roadmap.Movies.model.MovieForm;
+import com.accenture.roadmap.movies.model.MovieDTO;
+import com.accenture.roadmap.movies.model.MovieEntity;
+import com.accenture.roadmap.movies.model.MovieForm;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static com.accenture.roadmap.Movies.utils.MoviesUtils.*;
+import static com.accenture.roadmap.movies.utils.MoviesUtils.*;
 
 @Service
 public class MoviesService {

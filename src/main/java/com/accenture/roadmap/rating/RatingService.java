@@ -1,8 +1,8 @@
-package com.accenture.roadmap.Rating;
+package com.accenture.roadmap.rating;
 
-import com.accenture.roadmap.Movies.model.MovieEntity;
-import com.accenture.roadmap.Movies.MoviesRepository;
-import com.accenture.roadmap.Rating.model.RateDTO;
+import com.accenture.roadmap.movies.model.MovieEntity;
+import com.accenture.roadmap.movies.MoviesRepository;
+import com.accenture.roadmap.rating.model.RateDTO;
 import org.springframework.stereotype.Service;
 
 @Service

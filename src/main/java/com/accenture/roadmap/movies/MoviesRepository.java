@@ -1,6 +1,6 @@
-package com.accenture.roadmap.Movies;
+package com.accenture.roadmap.movies;
 
-import com.accenture.roadmap.Movies.model.MovieEntity;
+import com.accenture.roadmap.movies.model.MovieEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

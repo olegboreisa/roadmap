@@ -1,7 +1,7 @@
-package com.accenture.roadmap.Movies;
+package com.accenture.roadmap.movies;
 
-import com.accenture.roadmap.Movies.model.MovieDTO;
-import com.accenture.roadmap.Movies.model.MovieForm;
+import com.accenture.roadmap.movies.model.MovieDTO;
+import com.accenture.roadmap.movies.model.MovieForm;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

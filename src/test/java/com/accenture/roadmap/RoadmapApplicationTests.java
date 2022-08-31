@@ -8,6 +8,7 @@ class RoadmapApplicationTests {
 
     @Test
     void contextLoads() {
+        RoadmapApplication.main(new String[] {});
     }
 
 }

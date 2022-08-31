@@ -1,6 +1,6 @@
-package com.accenture.roadmap.Rating;
+package com.accenture.roadmap.rating;
 
-import com.accenture.roadmap.Rating.model.RateDTO;
+import com.accenture.roadmap.rating.model.RateDTO;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

@@ -1,6 +1,6 @@
-package com.accenture.roadmap.Movies;
+package com.accenture.roadmap.movies;
 
-import com.accenture.roadmap.Movies.model.MovieEntity;
+import com.accenture.roadmap.movies.model.MovieEntity;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

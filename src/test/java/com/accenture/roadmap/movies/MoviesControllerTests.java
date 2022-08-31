@@ -1,7 +1,7 @@
-package com.accenture.roadmap.Movies;
+package com.accenture.roadmap.movies;
 
-import com.accenture.roadmap.Movies.model.MovieDTO;
-import com.accenture.roadmap.Movies.model.MovieForm;
+import com.accenture.roadmap.movies.model.MovieDTO;
+import com.accenture.roadmap.movies.model.MovieForm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.Test;

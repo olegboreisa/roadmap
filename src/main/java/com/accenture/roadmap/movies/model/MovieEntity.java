@@ -1,4 +1,4 @@
-package com.accenture.roadmap.Movies.model;
+package com.accenture.roadmap.movies.model;
 
 import javax.persistence.*;
 
